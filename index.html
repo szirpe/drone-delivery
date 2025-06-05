@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyReach Drone Delivery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero">
+        <h1>SkyReach Drone Delivery</h1>
+        <p>Fast, reliable deliveries from the sky.</p>
+    </header>
+
+    <section class="features">
+        <img src="https://images.unsplash.com/photo-1508610048659-a06a0c1ba637?w=1200" alt="Drone delivering" class="hero-image" />
+        <h2>Request a Delivery</h2>
+        <form id="orderForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="location">Delivery Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <label for="item">What would you like to order?</label>
+            <select id="item" name="item" required>
+                <option value="CeraVe Moisturizing Lotion - $6.50">CeraVe Moisturizing Lotion - $6.50</option>
+                <option value="Neutrogena Hydro Boost Gel - $8.00">Neutrogena Hydro Boost Gel - $8.00</option>
+                <option value="The Ordinary Niacinamide 10% - $9.50">The Ordinary Niacinamide 10% - $9.50</option>
+                <option value="Cetaphil Gentle Skin Cleanser - $11.00">Cetaphil Gentle Skin Cleanser - $11.00</option>
+                <option value="RUDE Charcoal Cleanser - $12.50">RUDE Charcoal Cleanser - $12.50</option>
+                <option value="SALLY HANSEN Airbrush Legs Lotion - $14.00">SALLY HANSEN Airbrush Legs Lotion - $14.00</option>
+                <option value="Beauty Shield Vitamin C Serum - $15.50">Beauty Shield Vitamin C Serum - $15.50</option>
+                <option value="Freeman Clay Mask - Avocado - $17.00">Freeman Clay Mask - Avocado - $17.00</option>
+                <option value="Magic Stain Remover - $18.50">Magic Stain Remover - $18.50</option>
+                <option value="e.l.f. Holy Hydration! Face Cream - $5.00">e.l.f. Holy Hydration! Face Cream - $5.00</option>
+            </select>
+
+            <label for="notes">Extra Notes:</label>
+            <textarea id="notes" name="notes"></textarea>
+
+            <button type="submit">Submit Order</button>
+        </form>
+    </section>
+
+    <footer>
+        &copy; 2025 SkyReach
+    </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
