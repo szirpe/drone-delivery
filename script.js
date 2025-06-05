@@ -1,4 +1,6 @@
-document.getElementById('orderForm').addEventListener('submit', function(e) {
+const APPS_SCRIPT_URL = 'YOUR_APPS_SCRIPT_URL'; // replace with your deployed URL
+
+document.getElementById('orderForm').addEventListener('submit', async (e) => {
     e.preventDefault();
     const form = e.target;
 
@@ -9,20 +11,29 @@ document.getElementById('orderForm').addEventListener('submit', function(e) {
         notes: form.notes.value
     };
 
-    fetch('YOUR_APPS_SCRIPT_URL', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    })
-    .then(res => res.json())
-    .then(response => {
+    if (APPS_SCRIPT_URL === 'YOUR_APPS_SCRIPT_URL') {
+        alert('Please set your Apps Script URL in script.js');
+        return;
+    }
+
+    try {
+        const res = await fetch(APPS_SCRIPT_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (!res.ok) {
+            throw new Error('HTTP ' + res.status);
+        }
+
+        await res.json();
         alert('Order submitted! Check your email for confirmation.');
         form.reset();
-    })
-    .catch(err => {
-        console.error('Error:', err);
+    } catch (err) {
+        console.error('Submission error:', err);
         alert('There was an issue submitting your order.');
-    });
+    }
 });

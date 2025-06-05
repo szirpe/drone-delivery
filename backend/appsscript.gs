@@ -14,7 +14,14 @@ function doPost(e) {
   var message = 'New order from ' + name + ' at ' + location + '.\nNotes: ' + notes;
   GmailApp.sendEmail(ownerEmail, 'New SkyReach Order', message);
 
-  return ContentService
+  var output = ContentService
     .createTextOutput(JSON.stringify({ status: 'success' }))
     .setMimeType(ContentService.MimeType.JSON);
+  output.append("\n"); // ensure valid response
+  try {
+    output.setHeader('Access-Control-Allow-Origin', '*');
+  } catch (e) {
+    // setHeader may not be available in some contexts
+  }
+  return output;
 }
