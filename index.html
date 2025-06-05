@@ -7,14 +7,47 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="hero">
+    <header class="hero fade-in">
         <h1>SkyReach Drone Delivery</h1>
         <p>Fast, reliable deliveries from the sky.</p>
     </header>
 
-    <section class="features">
-        <img src="https://images.unsplash.com/photo-1508610048659-a06a0c1ba637?w=1200" alt="Drone delivering" class="hero-image" />
-        <h2>Request a Delivery</h2>
+    <section class="about fade-in">
+        <h2>About Us</h2>
+        <p>
+            At SkyReach, we're pioneering a smarter way to deliver essential skincare
+            products using autonomous drone technology. Our mission is to make same-day
+            delivery of lightweight items fast, reliable, and eco-friendly—starting with a
+            curated selection of high-demand skincare essentials.
+        </p>
+        <p>
+            SkyReach is an early-stage drone delivery startup focused on items under 1 lb,
+            with an initial catalog of 37 skincare products available for delivery in the San
+            Francisco area. We've developed a custom preorder system using Google Apps
+            Script, featuring an image-enhanced selection experience. Our operations are
+            powered by the DJI Mavic 3 Enterprise, enhanced with a cellular dongle for
+            real-time communication and autonomous flight capabilities.
+        </p>
+        <p>
+            Looking ahead, we're planning to expand our delivery capabilities to support
+            heavier payloads, incorporate AI agents for logistics automation and customer
+            support, and continue refining the overall experience for speed, transparency,
+            and ease of use.
+        </p>
+        <p>
+            SkyReach is more than delivery—it's the future of convenience, powered by
+            innovation.
+        </p>
+    </section>
+
+    <section class="gallery fade-in">
+        <img src="https://images.unsplash.com/photo-1508610048659-a06a0c1ba637?w=800" alt="Drone delivering" />
+        <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800" alt="Skincare products" />
+        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=800" alt="Drone in flight" />
+    </section>
+
+    <section class="order-section fade-in">
+        <h2>Place an Order</h2>
         <form id="orderForm">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -22,8 +55,46 @@
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
 
-            <label for="location">Delivery Location:</label>
-            <input type="text" id="location" name="location" required>
+            <label for="product">Select Product:</label>
+            <select id="product" name="product" required>
+                <option value="CeraVe Moisturizing Lotion #1">CeraVe Moisturizing Lotion #1 - $6.50</option>
+                <option value="Neutrogena Hydro Boost Gel #2">Neutrogena Hydro Boost Gel #2 - $8.00</option>
+                <option value="The Ordinary Niacinamide 10% #3">The Ordinary Niacinamide 10% #3 - $9.50</option>
+                <option value="Cetaphil Gentle Skin Cleanser #4">Cetaphil Gentle Skin Cleanser #4 - $11.00</option>
+                <option value="RUDE Charcoal Cleanser #5">RUDE Charcoal Cleanser #5 - $12.50</option>
+                <option value="SALLY HANSEN Airbrush Legs Lotion #6">SALLY HANSEN Airbrush Legs Lotion #6 - $14.00</option>
+                <option value="Beauty Shield Vitamin C Serum #7">Beauty Shield Vitamin C Serum #7 - $15.50</option>
+                <option value="Freeman Clay Mask - Avocado #8">Freeman Clay Mask - Avocado #8 - $17.00</option>
+                <option value="Magic Stain Remover #9">Magic Stain Remover #9 - $18.50</option>
+                <option value="e.l.f. Holy Hydration! Face Cream #10">e.l.f. Holy Hydration! Face Cream #10 - $5.00</option>
+                <option value="CeraVe Moisturizing Lotion #11">CeraVe Moisturizing Lotion #11 - $6.50</option>
+                <option value="Neutrogena Hydro Boost Gel #12">Neutrogena Hydro Boost Gel #12 - $8.00</option>
+                <option value="The Ordinary Niacinamide 10% #13">The Ordinary Niacinamide 10% #13 - $9.50</option>
+                <option value="Cetaphil Gentle Skin Cleanser #14">Cetaphil Gentle Skin Cleanser #14 - $11.00</option>
+                <option value="RUDE Charcoal Cleanser #15">RUDE Charcoal Cleanser #15 - $12.50</option>
+                <option value="SALLY HANSEN Airbrush Legs Lotion #16">SALLY HANSEN Airbrush Legs Lotion #16 - $14.00</option>
+                <option value="Beauty Shield Vitamin C Serum #17">Beauty Shield Vitamin C Serum #17 - $15.50</option>
+                <option value="Freeman Clay Mask - Avocado #18">Freeman Clay Mask - Avocado #18 - $17.00</option>
+                <option value="Magic Stain Remover #19">Magic Stain Remover #19 - $18.50</option>
+                <option value="e.l.f. Holy Hydration! Face Cream #20">e.l.f. Holy Hydration! Face Cream #20 - $5.00</option>
+                <option value="CeraVe Moisturizing Lotion #21">CeraVe Moisturizing Lotion #21 - $6.50</option>
+                <option value="Neutrogena Hydro Boost Gel #22">Neutrogena Hydro Boost Gel #22 - $8.00</option>
+                <option value="The Ordinary Niacinamide 10% #23">The Ordinary Niacinamide 10% #23 - $9.50</option>
+                <option value="Cetaphil Gentle Skin Cleanser #24">Cetaphil Gentle Skin Cleanser #24 - $11.00</option>
+                <option value="RUDE Charcoal Cleanser #25">RUDE Charcoal Cleanser #25 - $12.50</option>
+                <option value="SALLY HANSEN Airbrush Legs Lotion #26">SALLY HANSEN Airbrush Legs Lotion #26 - $14.00</option>
+                <option value="Beauty Shield Vitamin C Serum #27">Beauty Shield Vitamin C Serum #27 - $15.50</option>
+                <option value="Freeman Clay Mask - Avocado #28">Freeman Clay Mask - Avocado #28 - $17.00</option>
+                <option value="Magic Stain Remover #29">Magic Stain Remover #29 - $18.50</option>
+                <option value="e.l.f. Holy Hydration! Face Cream #30">e.l.f. Holy Hydration! Face Cream #30 - $5.00</option>
+                <option value="CeraVe Moisturizing Lotion #31">CeraVe Moisturizing Lotion #31 - $6.50</option>
+                <option value="Neutrogena Hydro Boost Gel #32">Neutrogena Hydro Boost Gel #32 - $8.00</option>
+                <option value="The Ordinary Niacinamide 10% #33">The Ordinary Niacinamide 10% #33 - $9.50</option>
+                <option value="Cetaphil Gentle Skin Cleanser #34">Cetaphil Gentle Skin Cleanser #34 - $11.00</option>
+                <option value="RUDE Charcoal Cleanser #35">RUDE Charcoal Cleanser #35 - $12.50</option>
+                <option value="SALLY HANSEN Airbrush Legs Lotion #36">SALLY HANSEN Airbrush Legs Lotion #36 - $14.00</option>
+                <option value="Beauty Shield Vitamin C Serum #37">Beauty Shield Vitamin C Serum #37 - $15.50</option>
+            </select>
 
             <label for="notes">Extra Notes:</label>
             <textarea id="notes" name="notes"></textarea>
@@ -36,6 +107,6 @@
         &copy; 2025 SkyReach
     </footer>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

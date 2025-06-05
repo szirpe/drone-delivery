@@ -4,33 +4,58 @@ body {
     padding: 0;
     background-color: #f5f5f5;
     color: #333;
+    overflow-x: hidden;
 }
 
 header.hero {
     background: url('https://images.unsplash.com/photo-1497493292307-31c376b6e479?w=1200') center/cover no-repeat;
     color: white;
     text-align: center;
-    padding: 100px 20px;
+    padding: 120px 20px;
 }
 
-.hero-image {
-    display: block;
-    width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
-    border-radius: 8px;
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
 }
 
-.features {
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.about, .order-section {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about h2, .order-section h2 {
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
     padding: 20px;
-    text-align: center;
+}
+
+.gallery img {
+    width: 240px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
 }
 
 form {
     display: flex;
     flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto;
 }
 
 label {
@@ -38,7 +63,7 @@ label {
     margin-bottom: 5px;
 }
 
-input, textarea {
+input, textarea, select {
     padding: 8px;
     border-radius: 4px;
     border: 1px solid #ccc;
@@ -52,6 +77,7 @@ button {
     color: white;
     cursor: pointer;
     border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
