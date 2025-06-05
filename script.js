@@ -5,11 +5,11 @@ document.getElementById('orderForm').addEventListener('submit', function(e) {
     const data = {
         name: form.name.value,
         email: form.email.value,
-        location: form.location.value,
+        product: form.product.value,
         notes: form.notes.value
     };
 
-    fetch('YOUR_APPS_SCRIPT_URL', {
+    fetch('https://script.google.com/macros/s/AKfycbwxyz1234567890abcdefg/exec', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
