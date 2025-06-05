@@ -1,4 +1,4 @@
-const APPS_SCRIPT_URL = 'YOUR_APPS_SCRIPT_URL'; // replace with your deployed URL
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwxyz1234567890abcdefg/exec';
 
 document.getElementById('orderForm').addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -8,6 +8,7 @@ document.getElementById('orderForm').addEventListener('submit', async (e) => {
         name: form.name.value,
         email: form.email.value,
         location: form.location.value,
+        item: form.item.value,
         notes: form.notes.value
     };
 

@@ -3,6 +3,7 @@ function doPost(e) {
   var name = data.name;
   var email = data.email;
   var location = data.location;
+  var item = data.item;
   var notes = data.notes;
 
   // Email to customer
@@ -11,7 +12,7 @@ function doPost(e) {
 
   // Notification to owner
   var ownerEmail = 'owner@example.com';
-  var message = 'New order from ' + name + ' at ' + location + '.\nNotes: ' + notes;
+  var message = 'New order from ' + name + ' at ' + location + '\nItem: ' + item + '\nNotes: ' + notes;
   GmailApp.sendEmail(ownerEmail, 'New SkyReach Order', message);
 
   var output = ContentService

@@ -5,10 +5,9 @@ This repository contains a simple demo website for a drone delivery business.
 ## Website
 
 Open `index.html` in your browser to see the landing page.
-Before submitting orders, edit `script.js` and replace the
-`APPS_SCRIPT_URL` constant with the URL of your deployed Google Apps
-Script Web App. If this value is left as the default placeholder, the
-site will show an error when submitting the form.
+The site is preconfigured to submit orders to the included Google Apps
+Script endpoint. If you fork this project, edit `script.js` and change
+the `APPS_SCRIPT_URL` constant to your own deployed Apps Script URL.
 
 ## Google Apps Script
 
@@ -19,6 +18,7 @@ following fields:
 - `email`
 - `location`
 - `notes`
+- `item`
 
 When a request is received, it sends an order confirmation to the
 customer and notifies the site owner about the request.
@@ -32,3 +32,6 @@ check the following:
    Script deployment URL.
 2. Your Apps Script web app is deployed with permissions allowing
    anyone to access the script.
+
+The order form includes a dropdown with common skin care products. Feel free
+to modify `index.html` to adjust the available items or prices.
